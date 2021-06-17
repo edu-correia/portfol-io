@@ -1,7 +1,9 @@
-import express, {Application} from "express";
+import express, { Application } from "express";
 import cors from "cors";
 
 import usersRouter from "./routes/users";
+
+import Error from "./errors/errors";
 
 class App{
     public express: Application
@@ -10,6 +12,7 @@ class App{
         this.express = express();
         this.middlewares();
         this.routes();
+        this.errors();
     }
 
     private middlewares(): void{
@@ -19,6 +22,11 @@ class App{
 
     private routes(): void{
         this.express.use("/users", usersRouter);
+    }
+
+    private errors(): void{
+        this.express.use(Error.notFound);
+        this.express.use(Error.defaultError);
     }
 }
 
