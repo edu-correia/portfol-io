@@ -50,8 +50,8 @@ model Language{
 }
 
 model ProjectLanguage{
-  id Int @default(autoincrement()) @id
-
+  @@id([projectId, languageId])
+  
   project Project @relation(fields: [projectId], references: [id])
   projectId Int
 

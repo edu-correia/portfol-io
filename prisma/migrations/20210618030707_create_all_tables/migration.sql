@@ -37,11 +37,10 @@ CREATE TABLE "Language" (
 
 -- CreateTable
 CREATE TABLE "ProjectLanguage" (
-    "id" SERIAL NOT NULL,
     "projectId" INTEGER NOT NULL,
     "languageId" INTEGER NOT NULL,
 
-    PRIMARY KEY ("id")
+    PRIMARY KEY ("projectId","languageId")
 );
 
 -- CreateTable
