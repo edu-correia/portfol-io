@@ -66,6 +66,12 @@ class ProjectsController{
     public async delete(req: Request, res: Response ): Promise<Response>{
         const {id} = req.params;
 
+        await prisma["photo"].deleteMany({
+            where: {
+                projectId: Number(id)
+            }
+        });
+
         await prisma["project"].delete({
             where: {
                 id: Number(id)
