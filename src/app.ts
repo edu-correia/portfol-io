@@ -2,6 +2,7 @@ import express, { Application } from "express";
 import cors from "cors";
 
 import usersRouter from "./routes/users";
+import languagesRouter from "./routes/languages";
 
 import Error from "./errors/errors";
 
@@ -22,6 +23,7 @@ class App{
 
     private routes(): void{
         this.express.use("/users", usersRouter);
+        this.express.use("/languages", languagesRouter);
     }
 
     private errors(): void{
