@@ -5,6 +5,7 @@ import usersRouter from "./routes/users";
 import languagesRouter from "./routes/languages";
 import projectsRouter from "./routes/projects";
 import photosRouter from "./routes/photos";
+import imagesRouter from "./routes/images";
 
 import Error from "./errors/errors";
 
@@ -28,6 +29,7 @@ class App{
         this.express.use("/languages", languagesRouter);
         this.express.use("/projects", projectsRouter);
         this.express.use("/photos", photosRouter);
+        this.express.use("/images", imagesRouter);
     }
 
     private errors(): void{

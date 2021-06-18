@@ -12,6 +12,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.10",
     "@types/express": "^4.17.12",
+    "@types/multer": "^1.4.6",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
     "eslint": "^7.28.0",
@@ -23,7 +24,9 @@
     "@prisma/client": "^2.25.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
+    "easy-backblaze": "^2.0.1",
     "express": "^4.17.1",
+    "multer": "^1.4.2",
     "prisma": "2.25.0"
   }
 }
